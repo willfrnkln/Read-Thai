@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<readthai.readthai.FloatingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <TextView
+        android:id="@+id/definitionBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:padding="20dp"
+        android:text="Tap a word to see its definition"
+        android:textColor="@color/dark_green"
+        android:textSize="20sp"
+        android:background="@color/dull_green"
+        tools:text="Definition:" />
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:background="@color/dark_teal">
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:layout_minWidth="0dp"/>
+    </ScrollView>
+</readthai.readthai.FloatingLayout>
